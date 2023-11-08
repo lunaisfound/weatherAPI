@@ -1,0 +1,23 @@
+# Install python and update
+sudo apt update
+
+sudo apt install python3-pip
+
+sudo apt install python3.10-venv
+
+# Activate the virtual environment
+python3 -m venv {project_name}
+source {project_name}/bin/activate
+
+# Install pandas
+sudo pip install pandas
+
+# To connect to the s3 bucket
+sudo pip install s3fs
+
+# Install airflow
+# might fail because Airflow requires quite a lot of memory (4GB) to start as it is a complex system. So when creating instances in aws get the t2.medium type or above
+sudo pip install apache-airflow
+airflow standalone
+
+# Connect VSCode to your cloud instance using SSH
